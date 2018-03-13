@@ -17,7 +17,7 @@ function convert(num){
 window.setInterval(function(){ 
     var d = new Date();
     var yea = d.getFullYear();
-    var mon = d.getMonth();
+    var mon = d.getMonth()+1;
     var day = d.getDate();
     var h = d.getHours();
     var m = d.getMinutes();
@@ -32,14 +32,14 @@ window.setInterval(function(){
       yea=yea-2016;
 
     if(mon<3||(mon==3&&day<14))
-      mon=mon+12-3;
+      mon=mon+12-3-1;
     else
       mon=mon-3;
 
     if(day>=14)
       day=day-14;
     else
-      day=day+mmd[d.getMonth()-1]-14;
+      day=day+mmd[d.getMonth()==0?12:d.getMonth()]-14;
     
     var time1 = yea + " YEAR " + mon + " MONTH " + day + " DAY";
     var time2 = addZero(h) + " HOUR " + addZero(m) + " MINUTE " + addZero(s) + " SECOND";
