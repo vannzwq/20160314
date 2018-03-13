@@ -11,12 +11,12 @@ body{
 
 table{
   border-collapse:separate; 
-  border-spacing:3em;
+  border-spacing:2em;
 }
 
 table td{
-  height:30px;
-  width:30px;
+  height:0.5em;
+  width:0.5em;
   background-color:white;
   border-radius:50%;
 }
@@ -41,38 +41,32 @@ p{
 
 .seconds:after{
   position:absolute;
-  content:"seconds";
   color:#bdc3c7;
   font-family: 'Ubuntu Mono', sans-serif;
 }
 
 .minutes:after{
   position:absolute;
-  content:"minutes";
   color:#bdc3c7;
   font-family: 'Ubuntu Mono', sans-serif;
 }
 .hours:after{
   position:absolute;
-  content:"hour";
   color:#bdc3c7;
   font-family: 'Ubuntu Mono', sans-serif;
 }
 .years:after{
   position:absolute;
-  content:"year";
   color:#bdc3c7;
   font-family: 'Ubuntu Mono', sans-serif;
 }
 .months:after{
   position:absolute;
-  content:"month";
   color:#bdc3c7;
   font-family: 'Ubuntu Mono', sans-serif;
 }
 .days:after{
   position:absolute;
-  content:"day";
   color:#bdc3c7;
   font-family: 'Ubuntu Mono', sans-serif;
 }
