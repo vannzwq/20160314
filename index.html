@@ -1,68 +1,57 @@
 <!DOCTYPE html>
-<html >
+<html>
+
 <head>
   <meta charset="UTF-8">
-  <title>代建杉❤张淑芸</title>  
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>代建杉&张淑芸</title>
+  <link href="https://cdn.bootcss.com/amazeui/2.7.2/css/amazeui.min.css" rel="stylesheet">
+  <link href="app.css" rel="stylesheet">
 </head>
 
 <body>
-<div class='center'>
-  <p id="title">代 建 杉  ❤  张 淑 芸</p>
-  <p id="time1"></p>
-  <p id="time2"></p>
-  <table align="center">
-  <tr class='years'>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr class='months'>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr class='days'>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr class='hours'>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr class='minutes'>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr class='seconds'>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  </table></div>
-  <script src='js/jquery.min.js'></script>
-  <script  src="js/index.js"></script>
+  <div class="header">
+    <div id="app">
+      <div class="am-g">
+        <h1>代建杉&张淑芸</h1>
+        <p>{{ currTime.toLocaleString() }}</p>
+      </div>
+      <hr />
+      <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
+        <label>第{{ year_l }}年</label>
+        <div class="am-progress">
+          <div class="am-progress-bar" v-bind:style="{width: (month_l*100/12)+'%'}">{{ month_l }}个月</div>
+        </div>
+        <div class="am-progress">
+          <div class="am-progress-bar" v-bind:style="{width: (day_l*100/day_l_max)+'%'}">{{ day_l }}天</div>
+        </div>
+        <div class="am-progress">
+          <div class="am-progress-bar" v-bind:style="{width: (hour_l*100/24)+'%'}">{{ hour_l }}小时</div>
+        </div>
+        <div class="am-progress">
+          <div class="am-progress-bar" v-bind:style="{width: (minute_l*100/60)+'%'}">{{ minute_l }}分钟</div>
+        </div>
+        <div class="am-progress">
+          <div class="am-progress-bar" v-bind:style="{width: (second_l*100/60)+'%'}">{{ second_l }}秒</div>
+        </div>
+        <label>33</label>
+        <div class="am-progress">
+          <div class="am-progress-bar" v-bind:style="{width: (now_33*100/max_33)+'%'}">{{ now_33 }} / {{ max_33 }}</div>
+        </div>
+        <label>小可爱</label>
+        <div class="am-progress">
+          <div class="am-progress-bar" v-bind:style="{width: (now_zsy*100/max_zsy)+'%'}">{{ now_zsy }} / {{ max_zsy }}</div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/amazeui/2.7.2/js/amazeui.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
