@@ -24,10 +24,10 @@
       <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
         <label>Intertwining for {{ year_l }} Year</label>
         <div class="am-progress">
-          <div class="am-progress-bar" v-bind:style="{width: (month_l*100/12)+'%'}">{{ month_l }}Month</div>
+          <div class="am-progress-bar" v-bind:style="{width: (month_l*100/12)+'%'}">{{ month_l }}mon</div>
         </div>
         <div class="am-progress">
-          <div class="am-progress-bar" v-bind:style="{width: (day_l*100/day_l_max)+'%'}">{{ day_l }}Days</div>
+          <div class="am-progress-bar" v-bind:style="{width: (day_l*100/day_l_max)+'%'}">{{ day_l }}days</div>
         </div>
         <div class="am-progress">
           <div class="am-progress-bar" v-bind:style="{width: (hour_l*100/24)+'%'}">{{ hour_l }}h</div>
@@ -39,14 +39,20 @@
           <div class="am-progress-bar" v-bind:style="{width: (second_l*100/60)+'%'}">{{ second_l }}s</div>
         </div>
         <label>Love of Vann's Life</label>
+        </div>
         <label>{{ now_33 }} Days Love / {{ max_33 }} Days Life</label>
         <div class="am-progress">
-          <div class="am-progress-bar" v-bind:style="{width: (now_33*100/max_33)+'%'}"></div>
+          <div class="am-progress-bar" v-bind:style="{width: (now_33*100/max_33)+'%'}">
+            {{parseInt(now_33*100/max_33)}}%
+            </div>
         </div>
         <label>Love of Pika's Life</label>
+        </div>
         <label>{{ now_zsy }} Days Love / {{ max_zsy }} Days Life</label>
         <div class="am-progress">
-          <div class="am-progress-bar" v-bind:style="{width: (now_zsy*100/max_zsy)+'%'}"></div>
+          <div class="am-progress-bar" v-bind:style="{width: (now_zsy*100/max_zsy)+'%'}">
+          {{parseInt(now_zsy*100/max_zsy)}}%
+          </div>
         </div>
       </div>
     </div>
