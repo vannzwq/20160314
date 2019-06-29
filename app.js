@@ -2,9 +2,9 @@ var app = new Vue({
 	el: '#app',
 	data: {
 		month_days: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-		bd_33: "1997/01/11",
-		bd_zsy: "1998/04/11",
-		z3: "2016/03/14",
+		bd_33: "1995/02/26",
+		bd_zsy: "1994/02/02",
+		z3: "2018/05/21",
 		max_33: 0,
 		now_33: 0,
 		max_zsy: 0,
@@ -21,9 +21,9 @@ var app = new Vue({
 	mounted: function () {
 		setInterval(() => {
 			this.currTime = new Date();
-			this.bd_33 = new Date("1997/01/11");
-			this.bd_zsy = new Date("1998/04/11");
-			this.z3 = new Date("2016/03/14");
+			this.bd_33 = new Date("1995/02/26");
+			this.bd_zsy = new Date("1994/02/02");
+			this.z3 = new Date("2018/05/21");
 			this.max_33 = parseInt((this.currTime.getTime() - this.bd_33.getTime()) / (1000 * 60 * 60 * 24));
 			this.now_33 = parseInt((this.currTime.getTime() - this.z3.getTime()) / (1000 * 60 * 60 * 24));
 			this.max_zsy = parseInt((this.currTime.getTime() - this.bd_zsy.getTime()) / (1000 * 60 * 60 * 24));
