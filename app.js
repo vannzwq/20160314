@@ -36,22 +36,22 @@ var app = new Vue({
 			this.second_l = this.currTime.getSeconds();
 			if ((this.year_l % 4 == 0 && this.year_l % 100 != 0) || this.year_l % 400 == 0)
 				this.month_days[1]++;
-			if (this.month_l < 2 || (this.month_l == 2 && this.day_l < 14))
-				this.year_l = this.year_l - 2016 - 1;
+			if (this.month_l < 4 || (this.month_l == 4 && this.day_l < 21))
+				this.year_l = this.year_l - 2018 - 1;
 			else
-				this.year_l = this.year_l - 2016;
-			if (this.month_l < 2 || (this.month_l == 2 && this.day_l < 14))
-				this.month_l = this.month_l + 12 - 2 - 1;
-			else if (this.day_l < 14)
-				this.month_l = this.month_l - 2 - 1;
+				this.year_l = this.year_l - 2018;
+			if (this.month_l < 4 || (this.month_l == 4 && this.day_l < 21))
+				this.month_l = this.month_l + 12 - 4 - 1;
+			else if (this.day_l < 21)
+				this.month_l = this.month_l - 4 - 1;
 			else
-				this.month_l = this.month_l - 2;
+				this.month_l = this.month_l - 4;
 
-			if (this.day_l >= 14) {
-				this.day_l = this.day_l - 14;
+			if (this.day_l >= 21) {
+				this.day_l = this.day_l - 21;
 				this.day_l_max = this.month_days[this.currTime.getMonth()];
 			} else {
-				this.day_l = this.day_l + this.month_days[this.currTime.getMonth() == 0 ? 11 : this.currTime.getMonth() - 1] - 14;
+				this.day_l = this.day_l + this.month_days[this.currTime.getMonth() == 0 ? 11 : this.currTime.getMonth() - 1] - 21;
 				this.day_l_max = this.month_days[this.currTime.getMonth() == 0 ? 11 : this.currTime.getMonth() - 1];
 			}
 		}, 1000)
